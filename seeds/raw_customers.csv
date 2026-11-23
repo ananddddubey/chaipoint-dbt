@@ -1,0 +1,6 @@
+id,first_name,last_name,email,city,created_at
+1,Aarav,Sharma,aarav@example.com,Delhi,2025-01-05
+2,Diya,Verma,diya@example.com,Mumbai,2025-01-09
+3,Rohan,Gupta,rohan@example.com,Noida,2025-02-11
+4,Meera,Iyer,meera@example.com,Chennai,2025-02-20
+5,Kabir,Singh,kabir@example.com,Delhi,2025-03-02

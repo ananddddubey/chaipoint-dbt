@@ -1,0 +1,18 @@
+with source as (
+
+    select * from {{ source('chaipoint', 'orders') }}
+
+),
+
+renamed as (
+
+    select
+        id                          as order_id,
+        customer_id,
+        cast(order_date as date)    as order_date,
+        status
+    from source
+
+)
+
+select * from renamed

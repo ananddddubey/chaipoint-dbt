@@ -1,0 +1,9 @@
+id,order_id,payment_method,amount
+1,101,upi,45000
+2,102,credit_card,120000
+3,103,upi,30000
+4,104,wallet,25000
+5,105,upi,80000
+6,106,credit_card,60000
+7,106,wallet,15000
+8,107,upi,50000

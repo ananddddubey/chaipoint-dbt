@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: chaipoint
+    description: "Raw ChaiPoint tables loaded with dbt seed."
+    database: workspace
+    schema: dbt_dev
+    tables:
+      - name: customers
+        identifier: raw_customers
+        columns:
+          - name: id
+            data_tests: [unique, not_null]
+      - name: orders
+        identifier: raw_orders
+        columns:
+          - name: id
+            data_tests: [unique, not_null]
+      - name: payments
+        identifier: raw_payments
+        columns:
+          - name: id
+            data_tests: [unique, not_null]

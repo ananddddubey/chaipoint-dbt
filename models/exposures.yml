@@ -1,0 +1,15 @@
+version: 2
+
+exposures:
+  - name: weekly_revenue_dashboard
+    label: Weekly Revenue Dashboard
+    type: dashboard
+    maturity: high
+    url: https://looker.com/dashboards/weekly_revenue
+    description: "Revenue by week and city, used by the leadership team."
+    depends_on:
+      - ref('fct_orders')
+      - ref('dim_customers')
+    owner:
+      name: Analytics Team
+      email: analytics@example.com

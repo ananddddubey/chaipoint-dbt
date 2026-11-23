@@ -1,0 +1,15 @@
+version: 2
+
+unit_tests:
+  - name: test_payments_are_pivoted_per_method
+    description: "A split payment must produce one row with both methods summed."
+    model: int_payments_pivoted_to_orders
+    given:
+      - input: ref('stg_payments')
+        rows:
+          - {payment_id: 1, order_id: 106, payment_method: credit_card, amount: 600}
+          - {payment_id: 2, order_id: 106, payment_method: wallet, amount: 150}
+    expect:
+      rows:
+        - {order_id: 106, upi_amount: 0, credit_card_amount: 600,
+           wallet_amount: 150, total_amount: 750}

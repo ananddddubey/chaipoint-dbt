@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "One row per order with payment amounts in rupees."
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+      - name: amount
+        data_tests:
+          - is_positive
+  - name: dim_customers
+    description: "One row per customer with lifetime metrics."
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
